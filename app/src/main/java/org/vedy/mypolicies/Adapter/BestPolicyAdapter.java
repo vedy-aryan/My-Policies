@@ -2,11 +2,13 @@ package org.vedy.mypolicies.Adapter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -15,6 +17,7 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.bitmap.CenterCrop;
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
 
+import org.vedy.mypolicies.Activity.DetailsActivity;
 import org.vedy.mypolicies.Model.Policy;
 import org.vedy.mypolicies.R;
 
@@ -100,9 +103,14 @@ public class BestPolicyAdapter extends RecyclerView.Adapter<BestPolicyAdapter.vi
 
 
         //Goto Details Page
-
-
-
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, DetailsActivity.class);
+                intent.putExtra("object",items.get(position));
+                context.startActivity(intent);
+            }
+        });
 
 
     }

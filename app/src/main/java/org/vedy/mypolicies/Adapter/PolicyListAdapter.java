@@ -1,6 +1,7 @@
 package org.vedy.mypolicies.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +15,7 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.bitmap.CenterCrop;
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
 
+import org.vedy.mypolicies.Activity.DetailsActivity;
 import org.vedy.mypolicies.Model.Policy;
 import org.vedy.mypolicies.R;
 
@@ -46,6 +48,15 @@ public class PolicyListAdapter extends RecyclerView.Adapter<PolicyListAdapter.vi
                 .transform(new CenterCrop(),new RoundedCorners(30))
                 .into(holder.pic);
 
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, DetailsActivity.class);
+                intent.putExtra("object",items.get(position));
+                context.startActivity(intent);
+            }
+        });
 
     }
 
