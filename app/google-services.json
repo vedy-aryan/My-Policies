@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "134724916423",
+    "firebase_url": "https://policiesapp-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "policiesapp",
+    "storage_bucket": "policiesapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:134724916423:android:3f05a80c8448e3a7f05ae2",
+        "android_client_info": {
+          "package_name": "org.vedy.mypolicies"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDcYQh6VNQexDQ9g7znh_jg9j9ziiDPa6s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
