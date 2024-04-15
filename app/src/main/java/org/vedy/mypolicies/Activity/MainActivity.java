@@ -42,6 +42,8 @@ public class MainActivity extends BaseActivity {
 
 
 
+
+
     }
 
     private void setVariable() {
@@ -137,10 +139,8 @@ public class MainActivity extends BaseActivity {
                         binding.bestPolicyView.setLayoutManager(new LinearLayoutManager(MainActivity.this, LinearLayoutManager.HORIZONTAL, false));
                         RecyclerView.Adapter adapter = new BestPolicyAdapter(list);
                         binding.bestPolicyView.setAdapter(adapter);
-
-
-                    }
                     binding.progressBarBestFood.setVisibility(View.GONE);
+                    }
                 }else {
                     Toast.makeText(MainActivity.this, "No Recommended Policy Found", Toast.LENGTH_SHORT).show();
                     binding.progressBarBestFood.setVisibility(View.GONE);

@@ -8,7 +8,7 @@
     tools:context=".Activity.IntroActivity">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/chatBotBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:scaleType="centerInside"
@@ -40,8 +40,8 @@
         android:textSize="40dp"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="@+id/imageView2"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintStart_toStartOf="@+id/imageView" />
+        app:layout_constraintEnd_toEndOf="@+id/chatBotBtn"
+        app:layout_constraintStart_toStartOf="@+id/chatBotBtn" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -49,7 +49,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="0dp"
         android:padding="0dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintBottom_toBottomOf="@+id/chatBotBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/arc" />
@@ -62,7 +62,7 @@
         android:background="@color/red"
         app:layout_constraintBottom_toBottomOf="parent"
         android:textAlignment="center"
-        app:layout_constraintTop_toBottomOf="@+id/imageView">
+        app:layout_constraintTop_toBottomOf="@+id/chatBotBtn">
 
 
         <androidx.constraintlayout.widget.ConstraintLayout

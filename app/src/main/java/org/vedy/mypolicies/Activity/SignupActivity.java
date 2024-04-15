@@ -62,7 +62,7 @@ public class SignupActivity  extends BaseActivity {
                             AuthenticationHelperse authenticationHelperse = new AuthenticationHelperse(ssss,name,age,Gender);
                             reference.child(ssss).setValue(authenticationHelperse);
 
-                            startActivity(new Intent(SignupActivity.this, MainActivity.class));
+                            startActivity(new Intent(SignupActivity.this, ProfileActivity.class));
                         }else{
                             Log.i(TAG," Failed: ",task.getException());
                             Toast.makeText(SignupActivity.this,"EMail Already Exists",Toast.LENGTH_SHORT).show();

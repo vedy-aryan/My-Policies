@@ -64,9 +64,9 @@ public class ListPolicyActivity extends BaseActivity {
                     }
                     if(list.size()>0){
 
-                        binding.policyListView.setLayoutManager(new GridLayoutManager(ListPolicyActivity.this,2));
+                        binding.savedPollicyListView.setLayoutManager(new GridLayoutManager(ListPolicyActivity.this,2));
                         adapterListPolicy = new PolicyListAdapter(list);
-                        binding.policyListView.setAdapter(adapterListPolicy);
+                        binding.savedPollicyListView.setAdapter(adapterListPolicy);
 
                     }
 

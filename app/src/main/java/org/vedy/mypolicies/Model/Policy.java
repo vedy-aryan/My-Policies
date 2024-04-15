@@ -13,8 +13,17 @@ public class Policy implements Serializable {
     private int StateId;
     private String Title;
     private int Year;
+    private String StepsToApply;
 
-    public Policy(int ageId, String apply, int categoryId, String description, int genderId, int id, String imagePath, int stateId, String title, int year) {
+    public String getStepsToApply() {
+        return StepsToApply;
+    }
+
+    public void setStepsToApply(String stepsToApply) {
+        StepsToApply = stepsToApply;
+    }
+
+    public Policy(int ageId, String apply, int categoryId, String description, int genderId, int id, String imagePath, int stateId, String title, int year, String stepsToApply) {
         AgeId = ageId;
         Apply = apply;
         CategoryId = categoryId;
@@ -25,6 +34,7 @@ public class Policy implements Serializable {
         StateId = stateId;
         Title = title;
         Year = year;
+        StepsToApply = stepsToApply;
     }
 
     public int getAgeId() {

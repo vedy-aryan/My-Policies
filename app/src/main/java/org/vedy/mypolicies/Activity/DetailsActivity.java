@@ -2,17 +2,22 @@ package org.vedy.mypolicies.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewOutlineProvider;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 
 import org.vedy.mypolicies.Model.Policy;
 import org.vedy.mypolicies.R;
 import org.vedy.mypolicies.databinding.ActivityDetailsBinding;
+
+import java.util.ArrayList;
 
 public class DetailsActivity extends BaseActivity {
     private ActivityDetailsBinding binding;
@@ -86,7 +91,37 @@ public class DetailsActivity extends BaseActivity {
 
         binding.categoryDetailsTxt.setText(ResultCategory);
 
+        String str = object.getStepsToApply();
+        String[] arrOfStr = str.split("VALO");
+        String result = "";
 
+        for (String a : arrOfStr) {
+            result = result +a+ "\n";
+        }
+
+        binding.stepApplyTxt.setText(result);
+
+
+        binding.addBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String link = object.getApply();
+                try {
+                    Uri uri = Uri.parse(link);
+                    startActivity(new Intent(Intent.ACTION_VIEW,uri));
+                }catch (Exception e){
+                    Toast.makeText(DetailsActivity.this, "No Website Linked", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+
+        binding.likeBtnDetails.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                binding.likeBtnDetails.setImageResource(R.drawable.favorite_red);
+            }
+        });
 
 
 

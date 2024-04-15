@@ -70,7 +70,7 @@ public class PolicyListAdapter extends RecyclerView.Adapter<PolicyListAdapter.vi
         ImageView pic;
         public viewholder(@NonNull View itemView) {
             super(itemView);
-            titleTxt = itemView.findViewById(R.id.titleTxt);
+            titleTxt = itemView.findViewById(R.id.textView44);
             yearTxt = itemView.findViewById(R.id.yearTxt);
             pic = itemView.findViewById(R.id.img);
 
